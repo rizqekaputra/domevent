@@ -13,7 +13,7 @@ body{
     padding: 0;
     margin: 0;
     overflow-x: hidden;
-    background-color: black;
+    background-color: rgb(19, 73, 109);
     user-select: none;
     font-family: 'Black Han Sans', sans-serif;
 }
@@ -104,16 +104,26 @@ a{
 }
 
 .home{
+    display: flex;
+    flex-direction: column;
     background-color: rgb(16, 34, 66);
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+}
+
+.home_conten{
+    height: 90vh;
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
 }
 
 .heroImage{
     width: 350px;
     height: 350px;
-    border-radius: 650px;
+    border-radius: 550px;
     object-fit: cover;
     opacity: 0;
     object-position: center;
@@ -127,7 +137,7 @@ a{
 
 .heroText{
     color: white;
-    font-size: 4rem;
+    font-size: 5rem;
     opacity: 0;
     animation-name: bottomToTop;
     animation-duration: 3s;
@@ -136,10 +146,42 @@ a{
 }
 
 .about{
-    background-image: url(https://picsum.photos/seed/08/900);
-    flex-direction: column;
-    justify-content: flex-start;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+	 "box1 box2"
+	 "box3 box4"
+	 ;
+}
 
+.box{
+    padding: 20px;
+    border: 1px solid rgb(32, 107, 112);
+}
+
+.about_box1{
+    grid-template: box1;
+    background-image: url(https://picsum.photos/seed/3/900);
+    background-size: cover;
+    background-position: center;
+}
+
+.about_box2{
+    grid-template: box2;
+    
+}
+
+.about_box3{
+    grid-template: box3;
+}
+
+.about_box4{
+    grid-template: box4;
+    grid-template: box1;
+    background-image: url(https://picsum.photos/seed/27/900);
+    background-size: cover;
+    background-position: center;
 }
 
 .contact{
@@ -221,7 +263,7 @@ a{
     justify-content: center;
     align-items: center;
     gap: 20px;
-    background-color: chartreuse;
+    background-color: rgba(255, 251, 13, 0.158);
     color: black;
     position: sticky;
     top: 10vh;
@@ -251,5 +293,5 @@ a{
 
         transform: rotate(360deg);
         opacity: 1;
-
+    }
 }
