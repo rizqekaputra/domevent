@@ -33,3 +33,20 @@ const hideaboutAlert = ()=>{
         //jadikan dia terlihat
         aboutAlert.style.display ='none'
 }
+
+//kita akan buat elemen html
+//menggunakan javascript
+
+//Tangkap element HTML
+let gallery = document.getElementById('container-gallery')
+let img = 100
+
+//INSERT HTML SYNTAX into GALLERY
+
+for(let i = 0; i <= 35; i++) {
+
+    gallery.innerHTML += 
+        `
+        <img src="https://picsum.photos/seed/${img++}/160">
+        `
+}
